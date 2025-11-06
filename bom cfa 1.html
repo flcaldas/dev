@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Bill of Materials (BOM) - Check Point - Edital CFA 15/2025</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h1 { color: #333; border-bottom: 2px solid #0056b3; padding-bottom: 5px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.9em; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; color: #333; text-transform: uppercase; }
+        .item-header { background-color: #cceeff; font-weight: bold; }
+        .sku { font-family: 'Courier New', monospace; font-weight: bold; color: #0056b3;}
+    </style>
+</head>
+<body>
+
+    <h1>Bill of Materials (BOM) Mínimo Aderente - Check Point</h1>
+    <p>Documento detalhando os itens mínimos necessários (Hardware, Licenciamento e Serviços) para atender aos requisitos do Edital de Licitação Nº 15/2025/CFA, utilizando produtos Check Point Quantum Force.</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Item do Edital</th>
+                <th>Tipo de Produto / Componente</th>
+                <th>Quantidade</th>
+                <th>Licenciamento Necessário</th>
+                <th>Prazo de Suporte/Garantia</th>
+                <th>Código do Produto (Part Number - SKU)</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <!-- ITEM 01: FIREWALL APPLIANCE (2 UNIDADES) -->
+            <tr><td colspan="6" class="item-header">ITEM 01: AQUISIÇÃO DE 2 (DOIS) APPLIANCES NEXT GENERATION FIREWALL (NGFW)</td></tr>
+            <tr>
+                <td>01.01</td>
+                <td>Appliance NGFW (Hardware base - Mínimo 1U)</td>
+                <td>2 Unidades</td>
+                <td>Licença SNBT (SandBlast) inclusa para 1º ano</td>
+                <td>Garantia limitada de hardware (Padrão Fabricante)</td>
+                <td class="sku">CPAP-SG9800-PLUS-SNBT</td>
+            </tr>
+            <tr>
+                <td>01.02</td>
+                <td>Placa de Interface de Expansão (Para atingir o mínimo de 6x SFP+ 10Gb)</td>
+                <td>2 Unidades</td>
+                <td>N/A</td>
+                <td>Garantia limitada de hardware</td>
+                <td class="sku">CPAC-8-1/10F-D</td>
+            </tr>
+            <tr>
+                <td>01.03</td>
+                <td>Transceptor SFP+ 10GbE (Mínimo de 6 por appliance - Total para HA)</td>
+                <td>12 Unidades</td>
+                <td>N/A</td>
+                <td>Garantia limitada de hardware</td>
+                <td class="sku">CPAC-TR-10LR-D (Exemplo de Transceptor LR)</td>
+            </tr>
+            <tr>
+                <td>01.04</td>
+                <td>Disco de Estado Sólido (SSD) (Armazenamento mínimo de 200 GB. O 9800 Plus inclui 2x 960GB NVMe)</td>
+                <td>Incluso (2 por appliance)</td>
+                <td>N/A</td>
+                <td>Garantia limitada de hardware</td>
+                <td class="sku">CPAC-SSD-960G-NVME-9800 (Incluso no Plus)</td>
+            </tr>
+
+            <!-- ITEM 02: LICENCIAMENTO/SUBSCRIÇÕES (24 MESES) -->
+            <tr><td colspan="6" class="item-header">ITEM 02: LICENCIAMENTO/SUBSCRIÇÕES DE SEGURANÇA (24 MESES)</td></tr>
+            <tr>
+                <td>02.01</td>
+                <td>Subscrição SandBlast (SNBT) - (Inclui NGFW, IPS, AV/Anti-Bot, Filtro URL, Sandboxing/Threat Emulation, Threat Extraction, Logs na Cloud)</td>
+                <td>24 Meses (por appliance)</td>
+                <td>SNBT (SandBlast Package)</td>
+                <td>24 Meses</td>
+                <td class="sku">CPSB-SNBT-9800-1Y-R (Renovação 12 meses)</td>
+            </tr>
+            <tr>
+                <td>02.02</td>
+                <td>Licença de Gerenciamento e Logs/Eventos Centralizados (SmartEvent/Infinity Events Cloud - 1 TB mínimo de armazenamento)</td>
+                <td>24 Meses (por appliance)</td>
+                <td>SmartEvent Cloud (SNBT/Smart-1 Cloud)</td>
+                <td>24 Meses</td>
+                <td class="sku">CPSM-CLOUD-GW-SME-2Y (Licença Hipotética 2 anos)</td>
+            </tr>
+
+            <!-- ITEM 03: SUPORTE TÉCNICO ESPECIALIZADO (24 MESES) -->
+            <tr><td colspan="6" class="item-header">ITEM 03: SUPORTE TÉCNICO ESPECIALIZADO (24 MESES)</td></tr>
+            <tr>
+                <td>03.01</td>
+                <td>Suporte Técnico Direto do Fabricante (24x7, SLA Alto) e Substituição Avançada de Hardware (RMA)</td>
+                <td>24 Meses (por appliance)</td>
+                <td>Suporte Direto (Ex: Diamond/PRO Support)</td>
+                <td>24 Meses</td>
+                <td class="sku">CPSB-DIA-9800-2Y (Suporte 2 anos)</td>
+            </tr>
+            
+            <!-- ITEM 04: IMPLANTAÇÃO E MIGRAÇÃO -->
+            <tr><td colspan="6" class="item-header">ITEM 04: SERVIÇOS DE IMPLANTAÇÃO, MIGRAÇÃO E TREINAMENTO</td></tr>
+            <tr>
+                <td>04.01</td>
+                <td>Serviços Profissionais de Implantação e Configuração (Inclui Planejamento, Migração de Regras, Cut-over e Documentação Final)</td>
+                <td>Serviço Único</td>
+                <td>N/A</td>
+                <td>Garantia dos serviços de implantação: Mínimo 60 dias após entrega definitiva</td>
+                <td class="sku">CPPS-IMPL-FW-9800 (SKU Serviço Profissional)</td>
+            </tr>
+            <tr>
+                <td>04.02</td>
+                <td>Treinamento Hands-On (Mínimo 16h) e Transferência de Conhecimento</td>
+                <td>Serviço Único</td>
+                <td>N/A</td>
+                <td>N/A</td>
+                <td class="sku">CPCS-CCSA-16H (SKU Treinamento Certificado)</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+</html>
