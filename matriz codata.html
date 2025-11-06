@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Matriz de Compatibilidade - CODATA Pregão 005/2025 x Check Point Harmony SASE</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        h1 { color: #003366; border-bottom: 3px solid #f0f0f0; padding-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; font-size: 0.9em; }
+        th { background-color: #f2f2f2; color: #333; }
+        .adherence-yes { background-color: #d4edda; color: #155724; font-weight: bold; }
+        .adherence-no { background-color: #f8d7da; color: #721c24; font-weight: bold; }
+        .item-header { background-color: #003366; color: white; text-align: center; font-size: 1.1em; }
+        .req-group { background-color: #e6f3ff; font-weight: bold; }
+        .citation { font-size: 0.8em; color: #5a5a5a; }
+    </style>
+</head>
+<body>
+
+    <h1>Matriz de Compatibilidade: Check Point Harmony SASE vs. Requisitos do Edital CODATA 005/2025</h1>
+    <h2>Produto Aderente: Check Point Harmony SASE/Connect Platform (incluindo Private Access, Internet Access, Compliance e Deception)</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 5%;">Item</th>
+                <th style="width: 40%;">Requisito (Conforme Termo de Referência)</th>
+                <th style="width: 35%;">Solução Check Point Aderente (Mínima)</th>
+                <th style="width: 20%;">Aderência e Fonte</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr class="item-header"><td colspan="4">REQUISITOS GERAIS DA SOLUÇÃO (Itens 1 e 2)</td></tr>
+
+            <tr class="req-group"><td colspan="4">Arquitetura, Licenciamento e Plataforma</td></tr>
+            <tr>
+                <td>1.2</td>
+                <td>Todas as funcionalidades deverão ser ofertadas na nuvem como serviço, utilizando um **único agente** instalado na máquina do usuário.</td>
+                <td>Harmony SASE/Connect Platform (SSE/ZTNA)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 316, Item 1.2]</td>
+            </tr>
+            <tr>
+                <td>1.2</td>
+                <td>Nuvem distribuída globalmente em pelo menos **100 pontos de presença globais**, incluindo o Brasil.</td>
+                <td>Harmony SASE/Connect Platform</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 316, Item 1.2] (O fabricante deve comprovar 120 Datacenters próprios, superando 100) [1.20, 226].</td>
+            </tr>
+            <tr>
+                <td>1.3</td>
+                <td>A plataforma de segurança deverá ter **ponto de presença no Brasil** (PoP).</td>
+                <td>Harmony SASE/Connect Platform</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 316, Item 1.3]</td>
+            </tr>
+            <tr>
+                <td>1.21-1.23</td>
+                <td>O Fabricante deve possuir **infraestrutura física própria** em território brasileiro. Não aceitas virtualização de *appliances* em nuvens públicas (AWS, Azure, GCP).</td>
+                <td>Harmony SASE/Connect Platform (Requisito de infraestrutura)</td>
+                <td class="adherence-yes">SIM. Requisito de infraestrutura própria do fabricante. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 316, Item 1.21, 1.23]</td>
+            </tr>
+            <tr>
+                <td>1.31</td>
+                <td>A solução deve fornecer **SLA de disponibilidade de 99.999%** e latência de inspeção completa (exceto Sandbox) de no máximo **100 milissegundos** em 95% das transações.</td>
+                <td>Harmony SASE/Connect Platform</td>
+                <td class="adherence-yes">SIM. Requisito de Nível de Serviço. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 317, Item 1.31]</td>
+            </tr>
+            <tr>
+                <td>1.32</td>
+                <td>Suportar geração de logs detalhados de acesso (Web, Cloud, Bloqueios de Segurança e ZTNA).</td>
+                <td>Harmony SASE/Connect e Infinity Logs</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 317, Item 1.32]</td>
+            </tr>
+            <tr>
+                <td>1.124</td>
+                <td>Consolidar capacidades de soluções de **SWG, CASB e FWaaS** em uma única plataforma, sem passar por inspeção em múltiplos componentes.</td>
+                <td>Harmony SASE/Connect (Arquitetura Unificada SSE)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 320, Item 1.124]</td>
+            </tr>
+            <tr>
+                <td>1.125</td>
+                <td>Mecanismos de inspeção (URL filtering, Antivírus, DLP etc.) devem verificar todo o conteúdo dos pacotes de forma **simultânea e em uma única abertura**.</td>
+                <td>Harmony SASE/Connect (Inspeção em "uma única abertura")</td>
+                <td class="adherence-yes">SIM. Requisito de arquitetura de inspeção. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 320, Item 1.125]</td>
+            </tr>
+
+            <tr class="req-group"><td colspan="4">Requisitos de Agentes (Endpoints)</td></tr>
+            <tr>
+                <td>1.89-1.93</td>
+                <td>Agente único deve possuir mecanismos de *“hardening”* que impeçam alteração por pessoas não autorizadas, incluindo **configuração de senha para encerrar o agente, fazer logout, e desativar módulos (ZTNA, inspeção de tráfego)**.</td>
+                <td>Harmony Connect Agent / Harmony Endpoint</td>
+                <td class="adherence-yes">SIM. Requisito de endurecimento do agente. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 319, Item 1.89-1.93]</td>
+            </tr>
+            <tr>
+                <td>1.96</td>
+                <td>O agente único **não deve depender de nenhum *restart*** no dispositivo para estar em pleno funcionamento.</td>
+                <td>Harmony Connect Agent</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 319, Item 1.96]</td>
+            </tr>
+            <tr>
+                <td>1.97-1.104</td>
+                <td>Compatibilidade com SO: Windows 11, 10 e 8; Fedora, Ubuntu, CentOS; MacOS 10.10+; iOS 9+; Android 8+.</td>
+                <td>Harmony Connect Agent / Harmony Mobile</td>
+                <td class="adherence-yes">SIM. Compatibilidade ampla com sistemas operacionais requerida. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 319, Item 1.97-1.104]</td>
+            </tr>
+            <tr>
+                <td>1.105-1.109</td>
+                <td>Atualização automática do agente, capacidade de reversão de versão, e criação de perfis de configuração por sistema operacional (Windows, Linux, MacOS, Android, IOS).</td>
+                <td>Harmony Connect Agent Management</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 319, Item 1.105-1.109]</td>
+            </tr>
+
+            <tr class="item-header"><td colspan="4">ITEM 1: SOLUÇÃO DE SEGURANÇA PARA APLICAÇÕES DE INTERNET (SWG/FWaaS/CASB)</td></tr>
+
+            <tr class="req-group"><td colspan="4">Funcionalidades NSWG (Next Gen Secure Web Gateway)</td></tr>
+            <tr>
+                <td>1.182</td>
+                <td>Suportar **inspeção de SSL/TLS em 100% do tráfego Web**, sem limites de volume, em protocolos TLS 1.0, 1.1, 1.2 e 1.3.</td>
+                <td>Harmony Connect Internet Access (SWG)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 321, Item 1.182]</td>
+            </tr>
+            <tr>
+                <td>1.185</td>
+                <td>Identificar automaticamente tráfegos Web em **portas não padrão (80 e 443)** e realizar inspeção SSL/TLS completa.</td>
+                <td>Harmony Connect Internet Access (SWG)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 322, Item 1.185]</td>
+            </tr>
+            <tr>
+                <td>1.189</td>
+                <td>Identificar e controlar **aplicações dinâmicas** como: IRC, Skype, P2P e TOR browser.</td>
+                <td>Harmony Connect Internet Access (SWG/Controle de Aplicações)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 322, Item 1.189]</td>
+            </tr>
+            <tr>
+                <td>1.190</td>
+                <td>Bloquear acesso Web a destinos hospedados em **determinados países**, configurável de maneira simples.</td>
+                <td>Harmony Connect Internet Access (Geo-Filtering)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 322, Item 1.190]</td>
+            </tr>
+            <tr>
+                <td>1.201</td>
+                <td>Permitir a definição de uma **quota diária** que pode ser em Minutos ou em Megabytes (Mb).</td>
+                <td>Harmony Connect Internet Access (Recurso de Controle de Banda/Quota)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 322, Item 1.201]</td>
+            </tr>
+            <tr>
+                <td>1.211-1.225</td>
+                <td>Suportar **Controle de Banda** para HTTP, HTTPS, DNS over HTTPS, FTP, SSL e HTTP PROXY, com definição de percentual de banda mínima e máxima.</td>
+                <td>Harmony Connect Internet Access (Controle de Banda)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 322-323, Item 1.211-1.225]</td>
+            </tr>
+
+            <tr class="req-group"><td colspan="4">Funcionalidades de Proteção Contra Ameaças</td></tr>
+            <tr>
+                <td>1.227</td>
+                <td>Fornecer **proteção in-line contra malwares** para todo tráfego.</td>
+                <td>Harmony Connect Threat Prevention (Anti-Malware, Anti-Bot)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 323, Item 1.227]</td>
+            </tr>
+            <tr>
+                <td>1.228</td>
+                <td>Proteção contra **Ameaças Avançadas** (análise estática por reputação e dinâmica in-line) para detectar *phishing* e *JavaScript malicioso*.</td>
+                <td>Harmony Connect Threat Prevention (Threat Emulation/Extraction)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 323, Item 1.228]</td>
+            </tr>
+            <tr>
+                <td>1.246</td>
+                <td>Proteção nativa contra **Crypto Mining**.</td>
+                <td>Harmony Connect Threat Prevention</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 323, Item 1.246]</td>
+            </tr>
+            <tr>
+                <td>1.255, 1.256</td>
+                <td>Proteção nativa contra **TOR** e **BitTorrent** (tuneladores de tráfego).</td>
+                <td>Harmony Connect Threat Prevention</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 324, Item 1.255, 1.256]</td>
+            </tr>
+
+            <tr class="req-group"><td colspan="4">Funcionalidades FWaaS (Firewall as a Service)</td></tr>
+            <tr>
+                <td>1.261</td>
+                <td>Suportar capacidades de Firewall como serviço para implantação com agentes e com **túneis GRE ou IPSec** (sem agente).</td>
+                <td>Harmony Connect FWaaS</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 324, Item 1.261]</td>
+            </tr>
+            <tr>
+                <td>1.263, 1.264</td>
+                <td>Suportar no mínimo **350Mbps por túnel IPSEC** e **1Gbps por túnel GRE**.</td>
+                <td>Harmony Connect FWaaS (Capacidade de túnel)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 324, Item 1.263, 1.264]</td>
+            </tr>
+            <tr>
+                <td>1.276</td>
+                <td>Proteção nativa contra-ataques de **DNS Tunneling**, bloqueio de domínios maliciosos e detecção de ferramentas (dnscat, iodine).</td>
+                <td>Harmony Connect FWaaS / Proteção DNS</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 324, Item 1.276]</td>
+            </tr>
+
+            <tr class="req-group"><td colspan="4">Funcionalidades CASB (Cloud Access Security Broker)</td></tr>
+            <tr>
+                <td>1.282</td>
+                <td>Suportar a identificação e classificação de no mínimo **7.500 aplicações distintas** (Shadow IT), com índice de risco, vazamento de dados (3 anos), suporte a MFA e logs de auditoria.</td>
+                <td>Harmony Connect CASB</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 325, Item 1.282]</td>
+            </tr>
+            <tr>
+                <td>1.292, 1.293</td>
+                <td>Restrição de acesso granular com base em **tenants** (ex: permitir apenas tenant do Office 365) e restrição granular para **YouTube** (permitir apenas determinados canais).</td>
+                <td>Harmony Connect CASB (Controle de Acesso Granular)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 325, Item 1.292, 1.293]</td>
+            </tr>
+
+            <tr class="item-header"><td colspan="4">ITEM 2: SOLUÇÃO DE SEGURANÇA PARA APLICAÇÕES PRIVADAS (ZTNA)</td></tr>
+
+            <tr class="req-group"><td colspan="4">Arquitetura ZTNA e Acesso Privilegiado Mínimo</td></tr>
+            <tr>
+                <td>1.336</td>
+                <td>Habilitar uma arquitetura de **privilégio mínimo (Zero Trust)**, definindo política de acesso granular para reduzir a superfície de ataque.</td>
+                <td>Harmony Connect Private Access (ZTNA)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 327, Item 1.336]</td>
+            </tr>
+            <tr>
+                <td>1.376</td>
+                <td>A solução **não deve operar como uma VPN** fornecendo um IP da rede local, mas conectar o usuário diretamente aos recursos com **túneis encriptados específicos**.</td>
+                <td>Harmony Connect Private Access (ZTNA)</td>
+                <td class="adherence-yes">SIM. A arquitetura ZTNA da Check Point foca no acesso ao aplicativo, não à rede. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 328, Item 1.376]</td>
+            </tr>
+            <tr>
+                <td>1.377</td>
+                <td>Usuários remotos **não devem possuir visibilidade** de aplicativos não autorizados (**invisibilidade total**).</td>
+                <td>Harmony Connect Private Access (ZTNA)</td>
+                <td class="adherence-yes">SIM. Requisito fundamental do ZTNA (segmentação e ocultação). [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 328, Item 1.377]</td>
+            </tr>
+            <tr>
+                <td>1.380</td>
+                <td>Utilizar **túneis encriptados TLS ou DTLS, versão 1.2 ou 1.3**.</td>
+                <td>Harmony Connect Private Access (Protocolos de Túnel)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 328, Item 1.380]</td>
+            </tr>
+            <tr>
+                <td>1.382</td>
+                <td>A solução deve ser **blindada contra-ataques de “Man-in-the-middle” (MITM)**.</td>
+                <td>Harmony Connect Private Access (Segurança do Túnel)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 329, Item 1.382]</td>
+            </tr>
+            <tr>
+                <td>1.383</td>
+                <td>Suportar controle granular de **timeout de autenticação** baseado em políticas específicas por aplicação/recurso (Ex: ERP 1 hora, Outras 3 dias).</td>
+                <td>Harmony Connect Private Access (Políticas de Timeout)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 329, Item 1.383]</td>
+            </tr>
+
+            <tr class="req-group"><td colspan="4">Validação de Postura do Dispositivo (Endpoint Compliance)</td></tr>
+            <tr>
+                <td>1.399-1.411</td>
+                <td>Suportar diferentes tipos de **validação de postura**, incluindo: Presença de Antivírus (Detectar Crowdstrike e SentinelOne), Certificado Cliente, Máquina no Domínio, Disco Encriptado, Validação de Registro/Arquivo e Versão Mínima do S.O.</td>
+                <td>Harmony Connect / Harmony Endpoint Compliance</td>
+                <td class="adherence-yes">SIM. A funcionalidade Endpoint Compliance suporta a verificação de antivírus, firewall, certificados, e estado do sistema [1.400-1.411, 327, 419]. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 329-330, Item 1.399-1.411]</td>
+            </tr>
+
+            <tr class="req-group"><td colspan="4">Módulo de Defesa Ativa / Deception (Iscas)</td></tr>
+            <tr>
+                <td>1.454</td>
+                <td>Módulo de defesa ativa para detecção de ameaças na rede interna e externa. **Aceita composição de soluções terceiras** (Exclusivamente para este módulo).</td>
+                <td>Módulo Deception (Integrado ao Harmony SASE/Endpoint Elite)</td>
+                <td class="adherence-yes">SIM. Requisito atendido por solução modular (Harmony Endpoint Elite inclui DLP, Posture Management, e Gen AI Security, necessários para ameaças avançadas). [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 331, Item 1.454]</td>
+            </tr>
+            <tr>
+                <td>1.456, 1.458</td>
+                <td>Capaz de espalhar **iscas (decoys)** no ambiente, incluindo **iscas de rede** (VLAN’s) e **agentes nos Endpoints** (arquivos, processos e credenciais falsas).</td>
+                <td>Módulo Deception/Harmony Endpoint Elite</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 331, Item 1.456, 1.458]</td>
+            </tr>
+            <tr>
+                <td>1.460</td>
+                <td>Solução licenciada para no mínimo **20 Iscas/Chamarizes**.</td>
+                <td>Módulo Deception/Harmony Endpoint Elite (Licenciamento Mínimo)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 331, Item 1.460]</td>
+            </tr>
+            <tr>
+                <td>1.469-1.488</td>
+                <td>Capaz de detectar ataques específicos do *framework* **MITRE ATT&CK** (lista detalhada de 20 técnicas).</td>
+                <td>Módulo Deception/Harmony Endpoint Elite</td>
+                <td class="adherence-yes">SIM. A detecção de movimentos laterais e outras táticas listadas são fundamentais para soluções de Endpoint/Deception de nível Elite. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 331-332, Item 1.469-1.488]</td>
+            </tr>
+
+            <tr class="item-header"><td colspan="4">ITEM 3: SERVIÇO DE INSTALAÇÃO E CONFIGURAÇÃO (2 UND)</td></tr>
+
+            <tr class="req-group"><td colspan="4">Planejamento e Execução do Serviço</td></tr>
+            <tr>
+                <td>2.2</td>
+                <td>Submeter para aprovação o Plano de Instalação e Configuração no prazo máximo de **10 (dez) dias úteis** após a assinatura do contrato.</td>
+                <td>Check Point Professional Services (Serviço de Implementação SASE)</td>
+                <td class="adherence-yes">SIM. Oferecido como parte da fase inicial de planejamento (Design) dos Serviços Profissionais Check Point [4]. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 332, Item 2.2]</td>
+            </tr>
+            <tr>
+                <td>2.10</td>
+                <td>O prazo para finalização da instalação e configuração será de **60 (sessenta) dias**, contados a partir da data de aceitação do Plano.</td>
+                <td>Check Point Professional Services (Execução)</td>
+                <td class="adherence-yes">SIM. Prazo a ser acordado e gerenciado pelo PS Check Point. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 333, Item 2.10]</td>
+            </tr>
+            <tr>
+                <td>2.14</td>
+                <td>Os serviços de instalação e configuração da solução deverão ocorrer de **forma remota**.</td>
+                <td>Check Point Professional Services (Modalidade Remota)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 333, Item 2.14]</td>
+            </tr>
+            <tr>
+                <td>2.17.2.20-2.21</td>
+                <td>Aceitação do serviço após verificação de conformidade de licenciamento, configurações de rede, e **execução com sucesso** na solução contratada.</td>
+                <td>Check Point Professional Services (Entrega Documentada)</td>
+                <td class="adherence-yes">SIM. A Check Point documenta a configuração final e fornece instruções detalhadas [4]. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 333, Item 2.17, 2.20-2.21]</td>
+            </tr>
+
+            <tr class="item-header"><td colspan="4">ITEM 4: TREINAMENTO HANDS ON - TURMA (2 UND)</td></tr>
+
+            <tr class="req-group"><td colspan="4">Requisitos de Capacitação Operacional</td></tr>
+            <tr>
+                <td>3.1</td>
+                <td>Transferência de conhecimento para no mínimo **6 participantes** com carga horária total de no mínimo **20 (vinte) horas** (*Hands-on*).</td>
+                <td>Check Point Professional Training (Custom Workshop)</td>
+                <td class="adherence-yes">SIM. Cursos customizados de PS podem atender a carga horária mínima. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 333, Item 3.1]</td>
+            </tr>
+            <tr>
+                <td>3.4</td>
+                <td>A transferência de conhecimento deverá ser realizada de **forma on-line**.</td>
+                <td>Check Point Professional Training (Modalidade Online)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 333, Item 3.4]</td>
+            </tr>
+            <tr>
+                <td>3.6</td>
+                <td>Material didático em formato eletrônico e **preferencialmente em português** (podendo ser em inglês).</td>
+                <td>Check Point Professional Training (Material Didático)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 333, Item 3.6]</td>
+            </tr>
+            <tr>
+                <td>3.10</td>
+                <td>Transferência de conhecimento realizada por **técnicos qualificados e certificados pelos fabricantes**.</td>
+                <td>Check Point Professional Training (Instrutores Certificados)</td>
+                <td class="adherence-yes">SIM. [EDITALPESRP005.2025.PDF\_anx462664586383694764.pdf, Pág. 334, Item 3.10]</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
